@@ -1,0 +1,19 @@
+{
+  "name": "presentation_power_of_practice",
+  "version": "0.0.1",
+  "description": "Brown Bag Presentation",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "vulcanize": "~0.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hqmq/presentation_power_of_practice.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Ries <michael@riesd.com>",
+  "license": "MIT"
+}
