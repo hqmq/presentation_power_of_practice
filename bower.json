@@ -1,0 +1,26 @@
+{
+  "name": "presentation_power_of_practice",
+  "version": "0.0.1",
+  "authors": [
+    "Michael Ries <michael@riesd.com>"
+  ],
+  "description": "A Brown Bag Presentation at MoneyDesktop about the value of exploring new ideas",
+  "main": "index.html",
+  "keywords": [
+    "presentation",
+    "polymer"
+  ],
+  "license": "MIT",
+  "homepage": "http://hqmq.github.io/presentation_power_of_practice/index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.5"
+  }
+}
