@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Power of Practice</title>
+    <script src="bower_components/platform/platform.js"></script>
+
+    <link rel="import" href="bower_components/core-animated-pages">
+  </head>
+  <body>
+    <core-animated-pages id="slides" transitions="cross-fade-all">
+      <section>
+        <h1>OHAI</h1>
+      </section>
+    </core-animated-pages>
+
+    <script>
+    var slides = document.getElementById("slides");
+    var forward = function(){
+      console.log('forward');
+    };
+    var backward = function(){
+      console.log('backward');
+    };
+    var down = function(){
+      console.log('down');
+    };
+
+    document.addEventListener('keyup', function(ev){
+      var code = ev.keyCode;
+      switch(ev.keyCode) {
+        case 34: forward(); break;
+        case 33: backward(); break;
+        case 66: down(); break;
+      }
+    });
+    </script>
+  </body>
+</html>
