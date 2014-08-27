@@ -11,15 +11,23 @@
       <section>
         <h1>OHAI</h1>
       </section>
+      <section>
+        <h2>Smaller</h2>
+      </section>
     </core-animated-pages>
 
     <script>
     var slides = document.getElementById("slides");
+    var max_slide = slides.childElementCount - 1;
     var forward = function(){
-      console.log('forward');
+      if( slides.selected < max_slide ){
+        slides.selected = slides.selected + 1;
+      }
     };
     var backward = function(){
-      console.log('backward');
+      if( slides.selected > 0 ){
+        slides.selected = slides.selected - 1;
+      }
     };
     var down = function(){
       console.log('down');
@@ -28,9 +36,17 @@
     document.addEventListener('keyup', function(ev){
       var code = ev.keyCode;
       switch(ev.keyCode) {
-        case 34: forward(); break;
-        case 33: backward(); break;
-        case 66: down(); break;
+        case 34:
+        case 39:
+          forward(); break;
+        case 33:
+        case 37:
+          backward(); break;
+        case 66:
+        case 40:
+          down(); break;
+        default:
+          console.log(ev.keyCode);
       }
     });
     </script>
