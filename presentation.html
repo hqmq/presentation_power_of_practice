@@ -4,7 +4,7 @@
     <title>Power of Practice</title>
     <script src="bower_components/platform/platform.js"></script>
 
-    <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
+    <link rel="import" href="hq-slides.html">
 
     <style>
       html { height: 100%; }
@@ -12,67 +12,9 @@
         height: 100%;
         font-family: Helvetica;
       }
-      core-animated-pages {
-        height: 100%;
-      }
-      section {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      section h1 {
-        font-size: 15em;
-      }
     </style>
   </head>
   <body>
-    <core-animated-pages id="slides" transitions="cross-fade-all">
-      <section>
-        <h1>OHAI</h1>
-      </section>
-      <section>
-        <h2>Smaller</h2>
-      </section>
-    </core-animated-pages>
-
-    <script>
-    var slides = document.getElementById("slides");
-    var max_slide = slides.childElementCount - 1;
-    var forward = function(){
-      if( slides.selected < max_slide ){
-        slides.selected = slides.selected + 1;
-      }
-    };
-    var backward = function(){
-      if( slides.selected > 0 ){
-        slides.selected = slides.selected - 1;
-      }
-    };
-    var down = function(){
-      console.log('down');
-    };
-
-    document.addEventListener('keyup', function(ev){
-      var code = ev.keyCode;
-      switch(ev.keyCode) {
-        case 34:
-        case 39:
-        case 78:  //n
-        case 110: //N
-          forward(); break;
-        case 33:
-        case 37:
-        case 66: //b
-        case 98: //B
-          backward(); break;
-        case 66:
-        case 40:
-        case 32: //space
-          down(); break;
-      }
-    });
-    </script>
+    <hq-slides></hq-slides>
   </body>
 </html>
